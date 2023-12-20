@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: articulat-cf;
+  background-color: white;
+}
+
+.landingPage__container {
+  padding-top: 95px;
+}
