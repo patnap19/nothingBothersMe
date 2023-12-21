@@ -24,7 +24,60 @@ body {
   position: relative;
 }
 
-.social-media__container img {
+.social-media__container .mini-logo {
+  position: absolute;
+  /* width: 60px; */
+  top: 97px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social-media {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.social_media__links {
+  list-style: none;
+  position: relative;
+}
+
+.social_media__links::before {
+  content: "";
+  width: 2px;
+  height: 25px;
+  background-color: white;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.social_media__links::after {
+  content: "";
+  width: 2px;
+  height: 25px;
+  background-color: white;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.social-media__link {
+  margin: 25px 0;
+}
+
+.social-media__link i {
+  color: white;
+  font-size: 32px;
+}
+
+.social-media__container .bootle {
   position: absolute;
   top: 97px;
   height: 82%;
