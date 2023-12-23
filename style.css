@@ -551,7 +551,7 @@
   .nav-title__container {
     width: 100%;
     min-height: 30vh;
-    padding: 12% 0;
+    padding: 4% 0;
     display: flex;
     flex-direction: column;
   }
@@ -711,5 +711,36 @@
     margin: 0 auto;
     display: inline-block;
     border: 2px solid black;
+  }
+
+  .product {
+  }
+
+  .product-background {
+  }
+
+  .product-background::after {
+  }
+
+  .background-photo-product {
+  }
+
+  .background-product-color {
+  }
+
+  .header__container {
+  }
+
+  .product-text-container {
+  }
+
+  .product .section-title {
+  }
+
+  .product-first-text,
+  .product-second-text {
+  }
+
+  .read-more-product--button {
   }
 }
