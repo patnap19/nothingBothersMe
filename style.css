@@ -465,7 +465,7 @@
 
   .header {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .header-background {
@@ -498,10 +498,12 @@
     height: 100%;
     width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .social-media-links__container {
-    height: 100%;
+    height: 100vh;
     position: relative;
   }
 
@@ -556,8 +558,8 @@
 
   .main-nav {
     position: fixed;
-    top: 4%;
-    right: 12%;
+    top: 5%;
+    right: 8%;
   }
 
   .burger-bar {
@@ -639,13 +641,75 @@
     border: 2px solid black;
   }
 
-  .contact--button i {
-  }
-
   .messanger__container {
     position: absolute;
-    bottom: 12%;
+    top: 86vh;
+    transform: translateY(-50%);
     right: 8%;
     font-size: 32px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-background {
+    width: 100%;
+    height: 35vh;
+    background: url(photos/vodka-about-mobile.png);
+    background-size: cover;
+    position: relative;
+    margin-bottom: 16%;
+  }
+
+  .about-background::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: var(--main-black-color);
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .background-about-color {
+    display: none;
+  }
+
+  .background-photo-about {
+    display: none;
+  }
+
+  .about-text__container {
+    padding: 0% 8% 4% 8%;
+    text-align: center;
+  }
+
+  .about .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .about-first-text,
+  .about-second-text {
+    text-align: justify;
+    margin: 30px 0;
+    text-align-last: center;
+    -moz-text-align-last: center;
+    line-height: 24px;
+  }
+
+  .read-more-about--button {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--main-white-color);
+    background-color: var(--main-black-color);
+    padding: 12px 18px;
+    margin: 0 auto;
+    display: inline-block;
+    border: 2px solid black;
   }
 }
