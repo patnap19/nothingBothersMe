@@ -11,8 +11,6 @@
 
 body {
   width: 100%;
-  min-height: 100vh;
-  background-color: var(--main-white-color);
   color: var(--main-black-color);
   font-family: articulat-cf;
   font-size: 24px;
@@ -55,6 +53,7 @@ body {
   padding: 5% 10%;
   z-index: 10;
   display: flex;
+  position: relative;
 }
 
 .social-media-links__container {
@@ -62,6 +61,43 @@ body {
   height: 100%;
   position: relative;
   margin-right: 20vh;
+}
+
+.social-media__links {
+  list-style: none;
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.social-media__links::before {
+  content: "";
+  height: 20px;
+  width: 2px;
+  background-color: var(--main-white-color);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social-media__links::after {
+  content: "";
+  height: 20px;
+  width: 2px;
+  background-color: var(--main-white-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social-media__link {
+  color: var(--main-white-color);
+  margin: 20px 0;
+  cursor: pointer;
 }
 
 .bootle-img {
@@ -90,7 +126,7 @@ body {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  border-radius: 45%;
+  border-radius: 20%;
 }
 
 .nav__elements {
@@ -112,16 +148,299 @@ body {
   margin-top: 15%;
 }
 
+.buttons__container {
+  margin-top: 8%;
+}
+
+.buy--button {
+  min-width: 10vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--main-white-color);
+  background-color: var(--main-black-color);
+  margin-right: 5%;
+  padding: 16px 24px;
+  border: 2px solid var(--main-black-color);
+}
+
+.contact--button {
+  min-width: 10vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--main-black-color);
+  margin-right: 5%;
+  padding: 16px 24px;
+  border: 2px solid var(--main-black-color);
+}
+
+.contact--button i {
+  margin-left: 5px;
+}
+
+.messanger__container {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.messanger__container i {
+  font-size: 32px;
+}
+
 /* ///////////////////////////////////// */
 .about {
   width: 100%;
   height: 100vh;
+  position: relative;
+}
+
+.about-background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.about-background::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: var(--main-black-color);
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  transform: translateY(-50%);
+  border-radius: 20%;
+}
+
+.background-about-color {
+  width: 70%;
+  height: 100%;
+  background-color: var(--main-white-color);
+}
+
+.background-photo-about {
+  width: 30%;
+  height: 100%;
+  background: url(photos/vodka-about.png);
+  background-size: cover;
+}
+
+.about-text__container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 70%;
+  width: 50%;
+}
+
+.about .section-title {
+  font-size: 96px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.about-first-text,
+.about-second-text {
+  font-size: 20px;
+  line-height: 36px;
+  text-align: justify;
+  text-align-last: right;
+  -moz-text-align-last: right;
+  margin-top: 3%;
+  text-transform: uppercase;
+}
+
+.read-more-about--button {
+  min-width: 10vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--main-white-color);
+  background-color: var(--main-black-color);
+  padding: 16px 24px;
+  border: 2px solid var(--main-black-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .product {
   width: 100%;
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
-.contact {
+
+.product-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: -1;
+}
+
+.product-background::after {
+  content: "";
+  width: 20px;
+  height: 2px;
   background-color: var(--main-black-color);
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+  border-radius: 20%;
+}
+
+.background-photo-product {
+  width: 30%;
+  height: 100%;
+  background: url(photos/productBg.png);
+  background-size: cover;
+}
+
+.background-product-color {
+  width: 70%;
+  height: 100%;
+  background: url(photos/bgNoise.png);
+  background-position: center;
+}
+
+.product-text-container {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  height: 70%;
+  width: 50%;
+}
+
+.product .section-title {
+  font-size: 96px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.product-first-text,
+.product-second-text {
+  font-size: 20px;
+  line-height: 36px;
+  text-align: justify;
+  text-align-last: left;
+  -moz-text-align-last: left;
+  margin-top: 3%;
+  text-transform: uppercase;
+}
+
+.read-more-product--button {
+  min-width: 10vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--main-white-color);
+  background-color: var(--main-black-color);
+  padding: 16px 24px;
+  border: 2px solid var(--main-black-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-black-color);
+  position: relative;
+  display: flex;
+}
+
+.contact::after {
+  content: "PRIVACY POLICY";
+  position: absolute;
+  bottom: 10vh;
+  right: 10%;
+  font-size: 10px;
+  color: var(--main-white-color);
+}
+
+.contact-social-media {
+  position: absolute;
+  top: 10%;
+  left: 10vw;
+  height: 90%;
+  width: 20vw;
+}
+
+.contact-social-media__links {
+  list-style: none;
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact-social-media__links::before {
+  content: "";
+  height: 20px;
+  width: 2px;
+  background-color: var(--main-white-color);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-social-media__links::after {
+  content: "";
+  height: 20px;
+  width: 2px;
+  background-color: var(--main-white-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-social-media__link {
+  color: var(--main-white-color);
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.contact-img {
+  position: absolute;
+  top: -20vh;
+  left: 50%;
+  z-index: 10;
+  height: 110%;
+}
+
+.contact-text__container {
+  width: 40vw;
+  color: var(--main-white-color);
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-site-title {
+  font-size: 96px;
+  text-transform: uppercase;
+  max-width: 30vw;
+  margin: 10% 0;
+}
+
+.contact__list {
+  margin: 10% 0;
+}
+
+.contact-number {
+  margin: 10px 0;
 }
