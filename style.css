@@ -458,6 +458,7 @@
 @media (max-width: 1024px) {
   body {
     font-size: 18px;
+    width: 100%;
   }
 
   .header {
@@ -477,7 +478,7 @@
 
   .background-photo {
     width: 50%;
-    height: 100vh;
+    height: 100%;
     background: url(photos/bgPhoto.png);
     background-size: cover;
     background-position: right;
@@ -491,31 +492,56 @@
   }
 
   .header__container {
-    padding: 8% 12.5%;
-    height: 100%;
+    margin: 4% 8%;
+    height: 84%;
+    width: 70%;
     position: relative;
   }
 
   .social-media-links__container {
+    height: 100%;
+    position: relative;
   }
 
   .social-media__links {
     position: absolute;
     top: 50%;
-    right: 12.5%;
+    right: 0;
     transform: translateY(-50%);
+    list-style: none;
+    font-size: 32px;
   }
 
   .social-media__links::before {
+    content: "";
+    height: 20px;
+    width: 2px;
+    background-color: var(--main-black-color);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .social-media__links::after {
+    content: "";
+    height: 20px;
+    width: 2px;
+    background-color: var(--main-black-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .social-media__link {
+    color: var(--main-black-color);
+    margin: 20px 0;
+    cursor: pointer;
   }
 
   .bootle-img {
+    display: none;
   }
 
   .nav-title__container {
@@ -550,8 +576,9 @@
   }
 
   .messanger__container {
-  }
-
-  .messanger__container i {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 32px;
   }
 }
